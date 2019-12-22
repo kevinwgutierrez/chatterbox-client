@@ -22,23 +22,22 @@ var RoomsView = {
 
   handleFilterRoom: function (room) {
     var roomName = $('#room').val();
-    if (Rooms.storage.includes(roomName)){
+    if (Rooms.storage.includes(roomName)) {
       // fetch refreshed message list
-      Parse.readAll(function (data){
+      Parse.readAll(function (data) {
         var messages = data.results;
         // iterate over the message objects
-        for (var i = 0; i < messages.length; i ++){
-      // check if the roomName matches each object
-      filtered.push(messages[i].roomname === roomName ? messages[i] : continue);
-      // if yes: add the object to filtered array
-      // run each filtered object through renderMessage
-        }
-      })
+      //   for (var i = 0; i < messages.length; i ++){
+      // // check if the roomName matches each object
+      // filtered.push(messages[i].roomname === roomName ? messages[i] );
+      // // if yes: add the object to filtered array
+      // // run each filtered object through renderMessage
+      //   }
+      }
       // create a filtered array
-      var filtered = [];
+     // var filtered = [];
 
-
-    }
+    };
   },
 
   // functionality to render the individual room objects that are in the rooms file
